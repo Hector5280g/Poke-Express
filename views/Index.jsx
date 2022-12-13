@@ -1,8 +1,22 @@
 import React, { Component } from 'react'
 
 const headerStyle = {
-    backgroundColor: "black"
+    color: '#ffffff',
+        background: 'red',
+        padding: '8px',
+        fontSize: '20px',
+        borderRadius: '7px',
+        fontFamily: 'monospace',
+        textAlign: 'center',
+        maxWidth: '968px',
+        margin: '0 auto',
 }
+const list = {
+    listStyle: 'none',
+    padding: '30px',
+    borderRadius: '4px',
+    textAlign: 'center'
+};
 export default class Index extends Component {
     render() {
       const {pokemon} = this.props;
@@ -13,7 +27,7 @@ export default class Index extends Component {
                   <ul>
                       {pokemon.map((pokemon, id) => {
                       return (
-                          <li>
+                          <li style= {list}>
                               <a href={`/pokemon/${id}`}> {pokemon.name}</a>
                           </li>
                       );
